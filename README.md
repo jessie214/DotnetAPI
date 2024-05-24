@@ -30,11 +30,8 @@ Please note that we have a Code of Conduct; please follow it in all your interac
 
 ## Authors
 
-[Jessie] - [Contact Information]
+[Jessie] 
 
-## License
-
-This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
