@@ -30,7 +30,7 @@ Please note that we have a Code of Conduct; please follow it in all your interac
 
 ## Authors
 
-[Jessie] 
+[JessieYan] 
 
 
 ## Acknowledgments
