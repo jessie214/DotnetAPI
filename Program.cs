@@ -30,6 +30,8 @@ builder.Services.AddCors((options) =>
     });
 });
 
+// Registers IUserRepository service with UserRepository implementation.
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 
