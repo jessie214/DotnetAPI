@@ -1,3 +1,118 @@
 # files
 .history/
 /history/
+
+# Visual Studio specific files
+.vscode/
+.vs/
+.vscode/
+.vscode/*
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.sln.ide
+*.sln.cache
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.edmx*
+*.tt
+*.publishsettings
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+# Uncomment if necessary
+# !packages/*.dll
+# !packages/*/lib/
+# !packages/*/tools/
+
+# Enable "uncomment if necessary" lines if the nuget pack is built with project reference
+# packages/*/lib/
+# packages/*/tools/
+
+# NPM Packages
+node_modules/
+jspm_packages/
+# TypeScript v1 declaration files
+typings/
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac files
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.exe.config
+*.pdb
+*.idb
+*.VC.db
+*.VC.opendb
+
+# Compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+*.hobj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled
