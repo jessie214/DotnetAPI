@@ -1,6 +1,6 @@
 using System.Text;
 using DotnetAPI.Data;
-// using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
@@ -39,6 +39,28 @@ builder.Services.AddCors((options) =>
 // Registers IUserRepository service with UserRepository implementation.
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+string? tokenKeyString = builder.Configuration.GetSection("AppSettings:TokenKey").Value;
+
+SymmetricSecurityKey tokenKey = new SymmetricSecurityKey(
+        Encoding.UTF8.GetBytes(
+            tokenKeyString != null ? tokenKeyString : ""
+        )
+    );
+
+TokenValidationParameters tokenValidationParameters = new TokenValidationParameters()
+{
+    IssuerSigningKey = tokenKey,
+    ValidateIssuerSigningKey = true,
+    ValidateIssuer = false,
+    ValidateAudience = false
+};
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+      options.TokenValidationParameters = tokenValidationParameters;
+    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -54,12 +76,10 @@ else
     app.UseHttpsRedirection();
 }
 
-app.MapControllers();
+app.UseAuthentication();
 
-// app.MapGet("/weatherforecast", () =>
-// {
-// })
-// .WithName("GetWeatherForecast")
-// .WithOpenApi();
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
